@@ -1,0 +1,37 @@
+<section class="card">
+    <h2>{{ titulo }}</h2>
+
+    <form class="form" (ngSubmit)="salvar()">
+        <label>
+            Titulo
+            <input type="text" 
+            name="titulo" 
+            [(ngModel)] = "filme.titulo"
+            placeholder="Ex: O Senhor dos Anéis"/>
+        </label>
+        <label>
+            Diretor
+            <input 
+            name = "diretor"
+            [(ngModel)] = "filme.diretor"
+            placeholder="Ex: Peter Jackson">
+        </label>
+        <label >
+            Categoria
+            <input 
+            name="categoria" 
+            [(ngModel)] = "filme.categoria"
+            placeholder="Fantasia">
+        </label>
+        <label >
+            Ano de Publicação
+            <input 
+            type="number" 
+            [(ngModel)] = "filme.anoPublicacao"
+            placeholder="2001">
+        </label>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+
+</section>

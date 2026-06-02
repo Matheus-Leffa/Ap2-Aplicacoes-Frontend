@@ -1,0 +1,41 @@
+<section class="card">
+    <h2>Filmes cadastrados</h2>
+
+    @if(filmes.length > 0 && !carregando) {
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Titulo</th>
+                    <th>Diretor</th>
+                    <th>Categoria</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @for (filme of filmes; track filme.id){
+                    <tr>
+                    <td>{{ filme.id }}</td>
+                    <td>{{ filme.titulo }}</td>
+                    <td>{{ filme.diretor }}</td>
+                    <td>{{ filme.categoria}}</td>
+                    <td>
+                        <button type="button" (click)="editar(filme)">Editar</button>
+                        <button type="button" (click)="excluir(filme)">Excluir</button>
+                    </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    @if(carregando){
+        <p>Carregando filmes...</p>
+    }
+
+    @if (filmes.length === 0 && !carregando){
+        <p>Nenhum filme cadastrado.</p>
+    } 
+    
+</section>

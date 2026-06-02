@@ -1,0 +1,21 @@
+{
+  "filmes": [
+    {
+      "id": "1",
+      "titulo": "O Senhor dos Anéis",
+      "diretor": "Peter Jackson",
+      "categoria": "Fantasia",
+      "anoPublicacao": 2001,
+      "disponivel": true
+    },
+    {
+      "titulo": "Era uma vez em Hollywood",
+      "diretor": "Tarantino",
+      "categoria": "ação",
+      "anoPublicacao": 2026,
+      "disponivel": true,
+      "id": "_4lipVNAzbI"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
