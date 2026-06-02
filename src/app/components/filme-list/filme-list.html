@@ -9,6 +9,7 @@
                     <th>Titulo</th>
                     <th>Diretor</th>
                     <th>Categoria</th>
+                    <th>Ano de Publicação</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -20,6 +21,7 @@
                     <td>{{ filme.titulo }}</td>
                     <td>{{ filme.diretor }}</td>
                     <td>{{ filme.categoria}}</td>
+                    <td>{{ filme.anoPublicacao}}</td>
                     <td>
                         <button type="button" (click)="editar(filme)">Editar</button>
                         <button type="button" (click)="excluir(filme)">Excluir</button>
