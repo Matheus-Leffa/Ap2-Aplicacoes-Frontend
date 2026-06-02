@@ -35,20 +35,32 @@ export class FilmeList {
     });
   }
 
-  editar(filme: Filme): void {
+ editar(filme: Filme): void {
     if (!filme.id) {
       return;
     }
 
-    const novoTitulo = prompt('Novo título:', filme.titulo);
+    const titulo = prompt('Título:', filme.titulo);
+    if (titulo === null) return;
 
-    if (!novoTitulo) {
-      return;
-    }
+    const diretor = prompt('Diretor:', filme.diretor);
+    if (diretor === null) return;
+
+    const categoria = prompt('Categoria:', filme.categoria);
+    if (categoria === null) return;
+
+    const ano = prompt(
+      'Ano de publicação:',
+      filme.anoPublicacao.toString()
+    );
+    if (ano === null) return;
 
     const filmeAtualizado: Filme = {
       ...filme,
-      titulo: novoTitulo
+      titulo,
+      diretor,
+      categoria,
+      anoPublicacao: Number(ano)
     };
 
     this.filmeService.atualizar(filme.id, filmeAtualizado).subscribe({

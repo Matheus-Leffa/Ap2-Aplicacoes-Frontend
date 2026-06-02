@@ -1,13 +1,4 @@
 {
-  "filmes": [
-    {
-      "titulo": "Era uma vez em Hollywood",
-      "diretor": "Tarantino",
-      "categoria": "ação",
-      "anoPublicacao": 2022,
-      "disponivel": true,
-      "id": "dMdW1OR2FME"
-    }
-  ],
+  "filmes": [],
   "$schema": "./node_modules/json-server/schema.json"
 }
